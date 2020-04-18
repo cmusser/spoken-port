@@ -66,7 +66,7 @@ This is the BSD Ports system configuration project for spoken.
    sudo make install
    sudo make deinstall
    ```
-8. Install the built package:
+8. Get the built package, which wil be here (`<version>` is the DISTVERSION from the Makefile):
    ```
-   sudo pkg install /usr/obj/dports/src/spoken-port/pkg/spoken-1.0.0.txz
+   /usr/obj/dports/src/spoken-port/pkg/spoken-<version>.txz
    ```
