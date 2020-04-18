@@ -1,0 +1,4 @@
+This is the REST API server for the Spoken microblog system. It uses
+a SQLite database to store and retrieve bike ride logs and routes.
+
+WWW: https://github.com/cmusser/spoken

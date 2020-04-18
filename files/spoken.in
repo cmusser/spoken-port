@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+
+# PROVIDE: spoken
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name=spokend
+rcvar=spoken_enable
+
+load_rc_config $name
+
+: ${spoken_enable="NO"}
+: ${spokend_pidfile="/var/run/${name}.pid"}
+: ${spoken_dbfile="/var/db/spoken.sqlite3"}
+
+export DATABASE_URL="${spoken_dbfile}"
+command="/usr/local/bin/${name}"
+pidfile="${spokend_pidfile}"
+
+run_rc_command $*
